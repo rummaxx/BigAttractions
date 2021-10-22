@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div>
+    <h1>А вот и достопримечательности</h1>
+    <h2>@Model.currCity</h2>
+    @{
+        foreach (var attraction in Model.allAttractions)
+        {
+            <div>
+                <h2>Достопримечательность: @attraction.name</h2>
+                <h4>Краткое описание: @attraction.shortDesc</h4>
+                <h4>Длинное описание: @attraction.longDesc</h4>
+                <h5>@attraction.img</h5>
+                <h5>Ссылка на картах: @attraction.linkGoogle</h5>
+            </div>
+        }
+    }
+</div>
